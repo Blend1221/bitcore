@@ -315,7 +315,7 @@ export class Key {
    * Creates key from plain mnemonic
    */
   #addKeyFromMnemonic(algo: string, mnemonic: string, opts: AddKeyOptions) {
-    const mnemonicOpts: SetFromMnemonicOptions = { ...opts, algo };
+    const mnemonicOpts: SetFromMnemonicOptions = { algo };
     
     if (this.#mnemonicHasPassphrase) {
       this.#validatePassphrase(opts.passphrase);
